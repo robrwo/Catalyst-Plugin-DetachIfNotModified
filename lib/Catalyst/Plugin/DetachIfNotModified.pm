@@ -75,6 +75,14 @@ sub detach_if_not_modified_since {
     }
 }
 
+=head1 CAVEATS
+
+Be careful when aggregating a collection of objects into a single
+timestamp, e.g. the maximum timestamp from a list.  If a member is
+removed from that collection, then the maximum timestamp won't be
+affected, and the result is that an outdated web page may be cached by
+user agents.
+
 =head1 SEE ALSO
 
 L<Catalyst>
