@@ -1,0 +1,4 @@
+Catalyst-Plugin-DetachIfNotModified-*/
+Catalyst-Plugin-DetachIfNotModified-*.tar.gz
+.build/
+cpanfile.snapshot
