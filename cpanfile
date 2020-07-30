@@ -11,10 +11,21 @@ recommends "Plack::Middleware::ConditionalGET" => "0";
 recommends "Ref::Util::XS" => "0";
 
 on 'test' => sub {
+  requires "Catalyst" => "5.90018";
+  requires "Catalyst::Controller" => "0";
+  requires "Catalyst::Test" => "0";
   requires "File::Spec" => "0";
+  requires "HTTP::Date" => "0";
+  requires "HTTP::Request::Common" => "0";
   requires "Module::Metadata" => "0";
+  requires "Moose" => "0";
   requires "Net::Statsd::Tiny" => "v0.3.0";
+  requires "Term::Size::Any" => "0";
+  requires "Test::Log::Dispatch" => "0";
   requires "Test::More" => "0";
+  requires "Test::Most" => "0";
+  requires "Time::Seconds" => "0";
+  requires "lib" => "0";
   requires "strict" => "0";
   requires "warnings" => "0";
 };
