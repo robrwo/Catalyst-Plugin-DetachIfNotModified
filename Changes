@@ -1,6 +1,9 @@
 Release history of {{ $dist->name }}:
 
 {{$NEXT}}
+  [Documentation]
+  - Added note that the method should only be used with GET or HEAD
+    request methods.
 
 v0.1.0    2020-07-30 18:12:43+01:00 Europe/London
  - Initial version.

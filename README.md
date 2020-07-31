@@ -56,6 +56,8 @@ Modified) and detach.
 The `$timestamp` may be a unix epoch, or an object with an `epoch`
 method, such as a [DateTime](https://metacpan.org/pod/DateTime) object.
 
+This should only be used with GET or HEAD requests.
+
 # CAVEATS
 
 Be careful when aggregating a collection of objects into a single

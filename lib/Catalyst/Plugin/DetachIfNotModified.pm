@@ -57,6 +57,8 @@ Modified) and detach.
 The C<$timestamp> may be a unix epoch, or an object with an C<epoch>
 method, such as a L<DateTime> object.
 
+This should only be used with GET or HEAD requests.
+
 =cut
 
 sub detach_if_not_modified_since {
