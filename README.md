@@ -74,6 +74,8 @@ user agents.
 
 [Plack::Middleware::ConditionalGET](https://metacpan.org/pod/Plack::Middleware::ConditionalGET)
 
+[RFC 7232 Section 3.3](https://tools.ietf.org/html/rfc7232#section-3.3)
+
 # SOURCE
 
 The development version is on github at [https://github.com/robrwo/Catalyst-Plugin-DetachIfNotModified](https://github.com/robrwo/Catalyst-Plugin-DetachIfNotModified)

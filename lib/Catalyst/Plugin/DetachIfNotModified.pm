@@ -93,6 +93,8 @@ L<Catalyst::Plugin::Cache::HTTP::Preempt>
 
 L<Plack::Middleware::ConditionalGET>
 
+L<RFC 7232 Section 3.3|https://tools.ietf.org/html/rfc7232#section-3.3>
+
 =head1 append:AUTHOR
 
 This module is based on code created for Science Photo Library
