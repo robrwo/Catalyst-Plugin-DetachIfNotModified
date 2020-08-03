@@ -58,6 +58,13 @@ method, such as a [DateTime](https://metacpan.org/pod/DateTime) object.
 
 This should only be used with GET or HEAD requests.
 
+If you later need to reset the `Last-Modified` header after calling
+this method, you can use
+
+```
+$c->res->headers->remove_header('Last-Modified');
+```
+
 # CAVEATS
 
 Be careful when aggregating a collection of objects into a single

@@ -7,5 +7,7 @@ Release history of {{ $dist->name }}:
 
   - Added link to RFC 7232.
 
+  - Added note about resetting the Last-Modified header.
+
 v0.1.0    2020-07-30 18:12:43+01:00 Europe/London
   - Initial version.

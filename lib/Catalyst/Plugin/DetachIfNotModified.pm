@@ -59,6 +59,11 @@ method, such as a L<DateTime> object.
 
 This should only be used with GET or HEAD requests.
 
+If you later need to reset the C<Last-Modified> header after calling
+this method, you can use
+
+  $c->res->headers->remove_header('Last-Modified');
+
 =cut
 
 sub detach_if_not_modified_since {
