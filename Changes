@@ -1,6 +1,10 @@
 Release history of {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - You may pass a list of timestamps to detach_if_not_modified_since,
+    and it will use the maximum timestamp.
+
   [Documentation]
   - Added note that the method should only be used with GET or HEAD
     request methods.

@@ -4,6 +4,7 @@
 requires "Catalyst" => "5.90018";
 requires "HTTP::Headers" => "5.18";
 requires "HTTP::Status" => "0";
+requires "List::Util" => "0";
 requires "Moose::Role" => "0";
 requires "Ref::Util" => "0";
 requires "namespace::autoclean" => "0";

@@ -6,6 +6,7 @@ use Moose::Role;
 
 use HTTP::Headers 5.18;
 use HTTP::Status qw/ HTTP_NOT_MODIFIED /;
+use List::Util qw/ max /;
 use Ref::Util qw/ is_blessed_ref /;
 
 # RECOMMEND PREREQ: Plack::Middleware::ConditionalGET
@@ -13,7 +14,7 @@ use Ref::Util qw/ is_blessed_ref /;
 
 use namespace::autoclean;
 
-our $VERSION = 'v0.1.1';
+our $VERSION = 'v0.2.0';
 
 =head1 SYNOPSIS
 
@@ -46,15 +47,15 @@ This should be used with L<Plack::Middleware::ConditionalGET>.
 
 =method detach_if_not_modified_since
 
-  $c->detach_if_not_modified_since( $timestamp );
+  $c->detach_if_not_modified_since( @timestamps );
 
 This sets the C<Last-Modified> header in the response to the
-C<$timestamp>, and checks if the request contains a
-C<If-Modified-Since> header that not less than the timestamp.  If it
+maximum timestamp, and checks if the request contains a
+C<If-Modified-Since> header that not less than the maximum timestamp.  If it
 does, then it will set the response status code to C<304> (Not
 Modified) and detach.
 
-The C<$timestamp> may be a unix epoch, or an object with an C<epoch>
+The C<@timestamps> is a list of unix epochs or objects with an C<epoch>
 method, such as a L<DateTime> object.
 
 This should only be used with GET or HEAD requests.
@@ -67,11 +68,12 @@ this method, you can use
 =cut
 
 sub detach_if_not_modified_since {
-    my ($c, $date) = @_;
+    my ($c, @times) = @_;
 
-    my $time = is_blessed_ref($date) ? $date->epoch : $date;
+    my @epochs = grep defined, map { is_blessed_ref($_) ? $_->epoch : $_ } @times;
+    my $time = max(@epochs);
     my $res  = $c->res;
-    $res->headers->last_modified( $time );
+    $res->headers->last_modified($time);
 
     my $hdr = $c->req->headers;
     if (my $since = $hdr->if_modified_since) {
