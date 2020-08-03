@@ -1,6 +1,8 @@
 Release history of {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.2.0    2020-08-03 16:51:06+01:00 Europe/London
   [Enhancements]
   - You may pass a list of timestamps to detach_if_not_modified_since,
     and it will use the maximum timestamp.
