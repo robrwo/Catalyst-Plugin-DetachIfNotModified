@@ -1,5 +1,7 @@
 package Catalyst::Plugin::DetachIfNotModified;
 
+use v5.8;
+
 # ABSTRACT: Short-circuit requests with If-Modified-Since headers
 
 use Moose::Role;
