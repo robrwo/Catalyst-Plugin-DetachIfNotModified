@@ -4,6 +4,8 @@ Release history of {{ $dist->name }}:
   [Documentation]
   - Bump copyright year.
 
+  - Fix encoding of links in README.
+
 v0.2.1    2021-04-27 16:46:25+01:00 Europe/London
   [Bug Fixes]
   - Remove unnecessary test prereq.

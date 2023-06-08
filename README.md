@@ -37,7 +37,7 @@ not need to.
 
 This can improve the performance of your website.
 
-This should be used with [Plack::Middleware::ConditionalGET](https://metacpan.org/pod/Plack::Middleware::ConditionalGET).
+This should be used with [Plack::Middleware::ConditionalGET](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AConditionalGET).
 
 # METHODS
 
@@ -77,9 +77,9 @@ user agents.
 
 [Catalyst](https://metacpan.org/pod/Catalyst)
 
-[Catalyst::Plugin::Cache::HTTP::Preempt](https://metacpan.org/pod/Catalyst::Plugin::Cache::HTTP::Preempt)
+[Catalyst::Plugin::Cache::HTTP::Preempt](https://metacpan.org/pod/Catalyst%3A%3APlugin%3A%3ACache%3A%3AHTTP%3A%3APreempt)
 
-[Plack::Middleware::ConditionalGET](https://metacpan.org/pod/Plack::Middleware::ConditionalGET)
+[Plack::Middleware::ConditionalGET](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AConditionalGET)
 
 [RFC 7232 Section 3.3](https://tools.ietf.org/html/rfc7232#section-3.3)
 
