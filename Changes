@@ -1,6 +1,9 @@
 Release history of {{ $dist->name }}:
 
 {{$NEXT}}
+  [Bug Fix]
+  - detach_if_not_modified_since will ignore empty lists.
+
   [Documentation]
   - Bump copyright year.
 

@@ -73,7 +73,7 @@ sub detach_if_not_modified_since {
     my ($c, @times) = @_;
 
     my @epochs = grep defined, map { is_blessed_ref($_) ? $_->epoch : $_ } @times;
-    my $time = max(@epochs);
+    my $time = max(@epochs) // return;
     my $res  = $c->res;
     $res->headers->last_modified($time);
 
