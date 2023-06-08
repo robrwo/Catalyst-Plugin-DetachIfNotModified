@@ -4,7 +4,7 @@ Catalyst::Plugin::DetachIfNotModified - Short-circuit requests with If-Modified-
 
 # VERSION
 
-version v0.2.2
+version v0.3.0
 
 # SYNOPSIS
 
@@ -72,6 +72,16 @@ timestamp, e.g. the maximum timestamp from a list.  If a member is
 removed from that collection, then the maximum timestamp won't be
 affected, and the result is that an outdated web page may be cached by
 user agents.
+
+# SUPPORT FOR OLDER PERL VERSIONS
+
+Since v0.3.0, the this module requires Perl v5.14 or later.
+
+Future releases may only support Perl versions released in the last ten years.
+
+If you need this module on earlier Perls, please use one of the v0.2.x
+versions of this module.  Significant bug or security fixes may be
+backported to those versions.
 
 # SEE ALSO
 

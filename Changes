@@ -1,10 +1,15 @@
 Release history of {{ $dist->name }}:
 
 {{$NEXT}}
+  [Incompatible Changes]
+  - Perl v5.14 is now required.
+
   [Bug Fix]
   - detach_if_not_modified_since will ignore empty lists.
 
   [Documentation]
+  - Documented Perl version support policy.
+
   - Bump copyright year.
 
   - Fix encoding of links in README.
