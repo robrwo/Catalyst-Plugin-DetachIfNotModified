@@ -4,7 +4,7 @@ Catalyst::Plugin::DetachIfNotModified - Short-circuit requests with If-Modified-
 
 # VERSION
 
-version v0.3.0
+version v0.3.1
 
 # SYNOPSIS
 
