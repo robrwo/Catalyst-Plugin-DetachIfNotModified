@@ -1,6 +1,8 @@
 Release history of {{ $dist->name }}:
 
 {{$NEXT}}
+  [Tests]
+  - Added required module for tests to work around broken CPAN Testers environments.
 
 v0.3.0    2023-06-08 09:17:19+01:00 Europe/London
   [Incompatible Changes]

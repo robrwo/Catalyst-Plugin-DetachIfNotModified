@@ -21,6 +21,7 @@ on 'test' => sub {
   requires "HTTP::Request::Common" => "0";
   requires "Module::Metadata" => "0";
   requires "Moose" => "0";
+  requires "Plack::Middleware::MethodOverride" => "0";
   requires "Term::Size::Any" => "0";
   requires "Test::Log::Dispatch" => "0";
   requires "Test::More" => "0";
